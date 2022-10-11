@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.wrapper {
+    text-align: center;
+    width: 1400px;
+}
+
+.wrapper__dinamic {
+    margin: 80px 0;
+    overflow: auto;
+}
+  
+
+.post {
+    display: flex;
+    padding: 15px;
+    border: 2px solid #1565c0;
+    margin-top: 15px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post__content {
+    text-align: left;
+}
+
+.post__btns {
+    display: flex;
+}
+
+.post-enter {
+    transform: translateX(-500px);
+}
+.post-enter-active {
+    transform: translateX(0px);
+    transition: all 500ms ease-in;
+}
+.post-exit {
+    opacity: 1;
+}
+.post-exit-active {
+    transform: translateX(-500px);
+    transition: all 500ms ease-in;
+}
+
+.form__modal {
+    display: flex;
+    flex-direction: column;
+}

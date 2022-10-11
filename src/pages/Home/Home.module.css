@@ -1,0 +1,36 @@
+.wrapper_home {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.block_home {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.case {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0;
+}
+
+.title_home {
+    margin-top: 30px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+}

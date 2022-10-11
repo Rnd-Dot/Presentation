@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import './styles/App.css';
+import {Navigate, Route, Routes} from 'react-router-dom';
+import Home from './pages/Home/Home';
+import FirstCase from './pages/Case1/FirstCase';
+import OpenPost from './pages/OpenPost';
+import NotFound from './pages/NotFound';
+import Login from './pages/Login/Login';
+import SecondCase from './pages/Case2/SecondCase';
+
+
+
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+        <div className='wrapper'>
+            <Routes>
+              <Route path="/" element={<Navigate to="/login" />}/>
+              <Route path='/home'  element={<Home />} />
+              <Route path='/posts' element={<FirstCase/>}/>
+              <Route path='/dynamic' element={<SecondCase/>}/>
+              <Route path='post/:id' element={<OpenPost/>}/>
+              <Route path='*' element={<NotFound/>}/>
+              <Route path='/login' element={<Login/>} />
+            </Routes>    
+        </div> 
   );
 }
 
